@@ -1,6 +1,10 @@
-const MusicPlayerPage = () => {
-    return <div>Music Player</div>;
-  };
-  
-  export default MusicPlayerPage;
-  
+const MusicPlayer = ({ source }: { source: string }) => {
+  return (
+    <audio controls>
+      <source src={source} type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+  );
+};
+
+export default MusicPlayer;
